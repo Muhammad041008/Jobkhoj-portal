@@ -1,0 +1,86 @@
+/* Basic Card Styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  width: auto;
+  position: relative;
+}
+
+/* Full Width Option */
+.card--full-width {
+  width: 100%;
+}
+
+/* Padding Variations */
+.card--padding-small {
+  padding: 1rem;
+}
+
+.card--padding-medium {
+  padding: 1.5rem;
+}
+
+.card--padding-large {
+  padding: 2.5rem;
+}
+
+.card--padding-none {
+  padding: 0;
+}
+
+/* Card Variants - Simple solid colors and borders only */
+.card--default {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+}
+
+.card--primary {
+  background-color: #dbeafe;
+  border: 1px solid #3b82f6;
+  color: #1f2937;
+}
+
+.card--success {
+  background-color: #d1fae5;
+  border: 1px solid #10b981;
+  color: #1f2937;
+}
+
+.card--warning {
+  background-color: #fef9c3;
+  border: 1px solid #f59e0b;
+  color: #1f2937;
+}
+
+.card--danger {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #1f2937;
+}
+
+.card--outline {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+}
+
+/* Very simple responsive adjustments */
+@media (max-width: 640px) {
+  .card--padding-small {
+    padding: 0.75rem;
+  }
+  
+  .card--padding-medium {
+    padding: 1rem;
+  }
+  
+  .card--padding-large {
+    padding: 1.5rem;
+  }
+  
+  .card {
+    border-radius: 3px;
+  }
+}

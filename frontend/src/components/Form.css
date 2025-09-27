@@ -1,0 +1,89 @@
+/* Basic form styles */
+.form {
+  width: 100%;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* Form variants */
+.form-default {
+  /* Default style already defined */
+}
+
+/* Form group - wraps label and input */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Form label */
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 8px;
+}
+
+/* Base input style */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* Input focus state */
+.form-input:focus {
+  outline: none;
+  border-color: #3366cc;
+}
+
+/* Input error state */
+.form-input-error {
+  border-color: #dc3545;
+}
+
+/* Textarea specific styles */
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Select specific styles */
+.form-select {
+  cursor: pointer;
+}
+
+/* Error message */
+.form-error {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 4px;
+  padding-left: 4px;
+}
+
+/* Basic responsive design */
+@media (max-width: 640px) {
+  .form {
+    padding: 16px;
+  }
+  
+  .form-input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .form-label {
+    font-size: 13px;
+  }
+  
+  .form-error {
+    font-size: 11px;
+  }
+}

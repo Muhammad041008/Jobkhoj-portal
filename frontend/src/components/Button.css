@@ -1,0 +1,130 @@
+/* Basic Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button Size Variations */
+.button--small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.button--medium {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.button--large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+/* Button Variant Colors - Simple solid colors only */
+.button--primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.button--secondary {
+  background-color: #6b7280;
+  color: white;
+}
+
+.button--success {
+  background-color: #10b981;
+  color: white;
+}
+
+.button--danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.button--warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.button--info {
+  background-color: #06b6d4;
+  color: white;
+}
+
+.button--outline {
+  background-color: transparent;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+}
+
+.button--ghost {
+  background-color: transparent;
+  color: #6b7280;
+  border: 1px solid transparent;
+}
+
+.button--link {
+  background-color: transparent;
+  color: #3b82f6;
+  text-decoration: underline;
+  padding: 0;
+  border: 1px solid transparent;
+}
+
+/* Button States - Minimal styling */
+.button--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button--full-width {
+  width: 100%;
+}
+
+/* Button Icon and Spinner */
+.button__icon {
+  display: inline-block;
+}
+
+.button__spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+}
+
+/* Adjust spinner for outline, ghost, and link variants */
+.button--outline .button__spinner,
+.button--ghost .button__spinner,
+.button--link .button__spinner {
+  border-color: rgba(59, 130, 246, 0.3);
+  border-top-color: #3b82f6;
+}
+
+/* Very simple responsive adjustments */
+@media (max-width: 640px) {
+  .button--small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .button--medium {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .button--large {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
