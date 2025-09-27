@@ -11,21 +11,17 @@ dotenv.config();
 const app = express();
 
 // CORS configuration for frontend https://jobkhoj-portal.vercel.app only
-const allowedOrigins = ['https://jobkhoj-portal.vercel.app'];
-
+const allowedOrigins = ['https://jobkhoj-portal.vercel.app', 'http://localhost:3000'];
 app.use(cors({
-  origin: function (origin, callback) {
-    // allow requests with no origin (like Postman, curl)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) === -1) {
-      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-      return callback(new Error(msg), false);
-    }
+  origin: function(origin, callback){
+    if(!origin) return callback(null, true);
+    if(!allowedOrigins.includes(origin)) return callback(new Error('Not allowed'), false);
     return callback(null, true);
   },
   methods: ['GET','POST','PUT','DELETE','OPTIONS'],
   credentials: true,
 }));
+app.options('*', cors());
 
 // Enable preflight requests for all routes
 app.options('*', cors());
