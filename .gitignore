@@ -47,6 +47,12 @@ dist-ssr
 *.temp
 *.cache
 
+#.ENV Files
+.env
+.env.local
+.env.*.local
+
+
 # OS files
 Thumbs.db
 .DS_Store
